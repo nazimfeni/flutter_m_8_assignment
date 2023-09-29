@@ -3,6 +3,8 @@
 A new Flutter project.
 
 <img src="https://github.com/nazimfeni/flutter_m_8_assignment/blob/master/screenshot/potrait.png" width="200" height="400" alt="Potrait image">
+<img src="https://github.com/nazimfeni/flutter_m_8_assignment/blob/master/screenshot/landscape.png" width="200" height="400" alt="Landscape image">
+
 
 ## Getting Started
 
