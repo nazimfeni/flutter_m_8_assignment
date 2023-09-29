@@ -2,7 +2,7 @@
 
 A new Flutter project.
 
-<img src="https://github.com/nazimfeni/flutter_module_06_live_test1/blob/master/screenshot/Screenshot_20230916_232334.png" width="200" height="400" alt="Image Description">
+<img src="https://github.com/nazimfeni/flutter_m_8_assignment/blob/master/screenshot/potrait.png" width="200" height="400" alt="Potrait image">
 
 ## Getting Started
 
