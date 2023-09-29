@@ -2,15 +2,22 @@ import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return ResponsiveApp(
       builder: (context) {
-        return MaterialApp(
+        return const MaterialApp(
           title: 'Flutter Demo',
           home: HomePage(),
         );
@@ -19,9 +26,14 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class HomePage extends StatelessWidget {
-  HomePage({Key? key}) : super(key: key);
+class HomePage extends StatefulWidget {
+  const HomePage({Key? key}) : super(key: key);
 
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   var myItems = [
     {
       "img": "images/lense.png",
@@ -45,11 +57,9 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ButtonStyle buttonStyle =
-        ElevatedButton.styleFrom(minimumSize: Size(double.infinity, 60));
     return Scaffold(
       appBar: AppBar(
-        title: Text("Profile"),
+        title: const Text("Profile"),
       ),
       body: OrientationBuilder(
         builder: (context, orientation) {
@@ -62,7 +72,7 @@ class HomePage extends StatelessWidget {
                     Expanded(
                       flex: 1,
                       child: ClipOval(
-                        child: Container(
+                        child: SizedBox(
                           width: MediaQuery.of(context).size.width,
                           height: MediaQuery.of(context).size.width,
                           child: Image.asset('images/camera.jpg',
@@ -75,7 +85,7 @@ class HomePage extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Padding(
+                          const Padding(
                             padding: EdgeInsets.all(16.0),
                             child: Text(
                               "John Doe",
@@ -85,7 +95,7 @@ class HomePage extends StatelessWidget {
                               ),
                             ),
                           ),
-                          Padding(
+                          const Padding(
                             padding: EdgeInsets.fromLTRB(16.0, 0, 16.0, 16.0),
                             child: Text(
                                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo tincidunt augue Contrary to popular belief, simply random text.'),
@@ -102,7 +112,7 @@ class HomePage extends StatelessWidget {
                               itemBuilder: (context, index) {
                                 return GestureDetector(
                                   child: Container(
-                                    margin: EdgeInsets.all(5),
+                                    margin: const EdgeInsets.all(5),
                                     width: double.infinity,
                                     height: isLandscape ? 100 : 150,
                                     child: Image.asset(
@@ -121,14 +131,14 @@ class HomePage extends StatelessWidget {
               : Column(
                   children: [
                     ClipOval(
-                      child: Container(
+                      child: SizedBox(
                         width: MediaQuery.of(context).size.width,
                         height: MediaQuery.of(context).size.width,
                         child:
                             Image.asset('images/camera.jpg', fit: BoxFit.cover),
                       ),
                     ),
-                    Padding(
+                    const Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
                         "John Doe",
@@ -138,7 +148,7 @@ class HomePage extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Padding(
+                    const Padding(
                       padding: EdgeInsets.fromLTRB(16.0, 0, 16.0, 16.0),
                       child: Text(
                           'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo tincidunt augue Contrary to popular belief, simply random text.'),
@@ -154,7 +164,7 @@ class HomePage extends StatelessWidget {
                         itemBuilder: (context, index) {
                           return GestureDetector(
                             child: Container(
-                              margin: EdgeInsets.all(5),
+                              margin: const EdgeInsets.all(5),
                               width: double.infinity,
                               height: isLandscape ? 100 : 150,
                               child: Image.asset(
